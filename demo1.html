@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Page</title>
+    <style>
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Vulnerable Page</h1>
+
+    <!-- Missing alt attribute for accessibility -->
+    <img src="image.jpg">
+
+    <!-- Inline JavaScript with potential XSS vulnerability -->
+    <script>
+        var user = "<script>alert('XSS Attack');</script>";
+        document.write("Welcome " + user);  // Unsafe output
+    </script>
+
+    <form method="post" action="/submit">
+        <!-- Missing labels for accessibility -->
+        Username: <input type="text" name="username"><br>
+        Password: <input type="password" name="password"><br>
+
+        <!-- Unencrypted, insecure submission -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
