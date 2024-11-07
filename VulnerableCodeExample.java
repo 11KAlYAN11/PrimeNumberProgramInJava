@@ -15,7 +15,8 @@ public class VulnerableCodeExample {
         if (password.equals("password123")) {
             System.out.println("Login successful.");
         } else {
-            System.out.println("Login failed.");
+            System.out.println("Login failed.");echo "public class Main { public static void main(String[] args) { System.out.println(\"Initial Version\"); } }" > Main.java
+
         }
     }
 
