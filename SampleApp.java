@@ -12,6 +12,7 @@ public class SampleApp {
     public void addData(int value) {
         if (value < 0) {
             System.out.println("Negative values not allowed");
+            System.out.println("Hello");
             return;
         }
         data.add(value);
